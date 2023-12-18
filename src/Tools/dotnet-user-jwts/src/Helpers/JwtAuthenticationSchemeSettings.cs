@@ -16,6 +16,7 @@ internal sealed record JwtAuthenticationSchemeSettings(string SchemeName, List<s
     private static readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
     {
         WriteIndented = true,
+        ReadCommentHandling = JsonCommentHandling.Skip
     };
 
     public void Save(string filePath)
